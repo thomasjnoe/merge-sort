@@ -10,7 +10,9 @@ end
 
 def merge(l, r, merged_list = [])
 	while l.size > 0 && r.size > 0  # while both arrays are populated...
-		merged_list << (l[0] < r[0] ? l.shift : r.shift)  # Compare the first two items in each list.  Move the smaller of the two into the merged list and remove it from the original array
+		 # Compare the first two items in each list.  
+		 # Move the smaller of the two into the merged list and remove it from the original array
+		merged_list << (l[0] < r[0] ? l.shift : r.shift)  
 	end
 	merged_list += l.size == 0 ? r : l  # Combine whichever list is not empty with the merged list
 	merged_list
